@@ -135,6 +135,9 @@
         <exec executable="${basedir}/build/tools/phpunit.phar" resultproperty="result.phpunit" taskname="phpunit">
             <arg value="--configuration"/>
             <arg path="${basedir}/build/phpunit.xml"/>
+<arg line="--coverage-clover ${basedir}/build/logs/clover.xml
+                --coverage-html ${basedir}/build/logs/
+                ."/>
         </exec>
     </target>
 
